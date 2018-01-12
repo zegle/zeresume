@@ -1,3 +1,34 @@
+// adds body padding at specific scroll position
+$(window).scroll(function () {
+  var y_scroll_pos = window.pageYOffset;
+  var scroll_pos_test = 950;
+  
+  if ($(window).width() >= 992) {
+    if (y_scroll_pos > scroll_pos_test) {
+      $("body").css("padding-left", "17rem");
+    }
+    else {
+      $("body").css("padding-left", "0rem");
+    }
+  }
+});
+
+// configured nav sliding at specific scroll position
+$(function() {
+  $(window).scroll(function () {
+    if ($(window).width() >= 992) {
+      if ($(this).scrollTop() > 950) {
+        $("#sideNav:hidden").css('visibility', 'visible');
+        $("#sideNav:hidden").fadeIn('slow');
+      }
+      else {
+        $("#sideNav:visible").fadeOut("slow");
+      }
+    }
+  });
+});
+
+
 (function($) {
   "use strict"; // Start of use strict
 
