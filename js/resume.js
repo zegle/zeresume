@@ -1,19 +1,20 @@
-// adds body padding at specific scroll position
+// adds/removes body padding at specific scroll position
 $(window).scroll(function () {
   var y_scroll_pos = window.pageYOffset;
   var scroll_pos_test = 950;
   
   if ($(window).width() >= 992) {
     if (y_scroll_pos > scroll_pos_test) {
-      $("body").css("padding-left", "17rem");
+      $("body").stop().animate({"padding-left":"17rem"});
     }
     else {
+      $("body").stop().animate({ "padding-left": "0rem" });
       $("body").css("padding-left", "0rem");
     }
   }
 });
 
-// configured nav sliding at specific scroll position
+// configured nav fadin/out at specific scroll position
 $(function() {
   $(window).scroll(function () {
     if ($(window).width() >= 992) {
@@ -22,7 +23,7 @@ $(function() {
         $("#sideNav:hidden").fadeIn('slow');
       }
       else {
-        $("#sideNav:visible").fadeOut("slow");
+        $("#sideNav:visible").fadeOut(500);
       }
     }
   });
