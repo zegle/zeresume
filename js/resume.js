@@ -1,3 +1,13 @@
+// adds loaded class on page load
+$(document).ready(function () {
+
+  setTimeout(function () {
+    $('body').addClass('loaded');
+    $('h1').css('color', '#222222');
+  }, 2000);
+
+});
+
 // adds/removes body padding at specific scroll position
 $(window).scroll(function () {
   var y_scroll_pos = window.pageYOffset;
@@ -9,7 +19,6 @@ $(window).scroll(function () {
     }
     else {
       $("body").stop().animate({ "padding-left": "0rem" });
-      $("body").css("padding-left", "0rem");
     }
   }
 });
