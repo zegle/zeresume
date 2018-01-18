@@ -28,11 +28,10 @@ $(function() {
   $(window).scroll(function () {
     if ($(window).width() >= 992) {
       if ($(this).scrollTop() > 950) {
-        $("#sideNav:hidden").css('visibility', 'visible');
-        $("#sideNav:hidden").fadeIn('slow');
+        $("#sideNav").stop().animate({ "left": "0px" });
       }
       else {
-        $("#sideNav:visible").fadeOut(500);
+        $("#sideNav").stop().animate({"left":"-300px"});
       }
     }
   });
