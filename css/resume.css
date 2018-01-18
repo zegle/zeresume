@@ -170,6 +170,15 @@ h2 {
   display: none;
 }
 
+#landing-head {
+    color: rgb(64,64,64) !important;}
+
+#work h2 {
+  text-align: center;
+  border: .5px solid transparent;
+  border-bottom-color: #cbd1d6;
+}
+
 @media (min-width: 992px) {
   #landing-container {
     background-image: url(../img/landing.jpg);
@@ -207,8 +216,7 @@ h2 {
     text-align: center;
     position: fixed;
     top: 0;
-    left: 0;
-    visibility:hidden;
+    left: -300px;
     flex-direction: column;
     width: 17rem;
     height: 100vh; }
