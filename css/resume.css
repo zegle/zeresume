@@ -188,7 +188,7 @@ h2 {
   margin-left: 17%;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 992px) { /*landing Page styling for desktop view*/
   #landing-container {
     background-image: url(../img/landing.jpg);
     background-attachment: fixed;
@@ -220,7 +220,7 @@ h2 {
       font-family: 'Saira Extra Condensed', serif;
       font-size: 1.35rem; } }
 
-@media (min-width: 992px) {
+@media (min-width: 992px) { /*Side nav styling for desktop view*/
   #sideNav {
     text-align: center;
     position: fixed;
@@ -250,6 +250,60 @@ h2 {
           display: block; }
           #sideNav .navbar-collapse .navbar-nav .nav-item .nav-link {
             display: block; } }
+
+@media (min-width: 992px) { /*css for desktop animations*/
+    .typewriter {
+      display: block;
+      overflow: hidden;
+      white-space: nowrap;
+      margin: 0 auto;
+      margin-left: 1px;
+      animation: 
+        typing 6.5s steps(70, end) forwards;
+      -moz-animation: 
+        typing 6.5s steps(70, end) forwards; }  
+    .slidelft {
+      position: relative;
+      left: 2000px;
+      animation: 
+        slide1 0.5s 1s forwards;
+      -moz-animation: slide1 0.5s 1s forwards; }
+    .slidedwn {
+      position: relative;
+      top: -1000px;
+      animation: 
+        slide2 0.5s forwards;
+      -moz-animation: slide2 0.5s forwards; }
+    .slideup {
+      position: relative;
+      bottom: -1000px;
+      animation: 
+        slide3 0.5s .5s forwards;
+      -moz-animation: slide3 0.5s .5s forwards; }}
+    
+
+/*Typing effect*/
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+@-moz-keyframes typing {from {width: 0} to {width:100%}}
+/*Slide in from left*/
+@keyframes slide1 {
+  100% { left: 0; }
+}
+@-moz-keyframes slide1 {100% { left: 0; }}
+/*Slide in from top*/
+@keyframes slide2 {
+  100% { top: 0; }
+}
+@-moz-keyframes slide2 {100% { top: 0; }}
+/*Slide in from bottom*/
+@keyframes slide3 {
+  100% { bottom: 0; }
+}
+@-moz-keyframes slide3 {100% { bottom: 0; }}
+
 
 section.resume-section {
   border-bottom: 1px solid #dee2e6;
