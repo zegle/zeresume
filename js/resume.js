@@ -8,30 +8,31 @@ $(document).ready(function () {
 
 });
 
+// configured nav slide in at specific scroll point, 
 // adds/removes body padding at specific scroll position
-$(window).scroll(function () {
-  var y_scroll_pos = window.pageYOffset;
-  var scroll_pos_test = 950;
-  
-  if ($(window).width() >= 992) {
-    if (y_scroll_pos > scroll_pos_test) {
-      $("body").stop().animate({"padding-left":"17rem"});
-    }
-    else {
-      $("body").stop().animate({ "padding-left": "0rem" });
-    }
-  }
-});
-
-// configured nav fadin/out at specific scroll position
 $(function() {
   $(window).scroll(function () {
     if ($(window).width() >= 992) {
-      if ($(this).scrollTop() > 950) {
+      if ($(this).scrollTop() >= 998) {
+        $("body").stop().animate({ "padding-left": "17rem" });
         $("#sideNav").stop().animate({ "left": "0px" });
+        $(".animate").addClass("typewriter").css('visibility', 'visible');
       }
       else {
         $("#sideNav").stop().animate({"left":"-300px"});
+        $("body").stop().animate({ "padding-left": "0rem" });
+        $(".animate").removeClass("typewriter").css('visibility', 'hidden');
+      }
+      if ($(this).scrollTop() >= 1972) {
+        $(".animate1").addClass("slidelft").css("visibility", "visible");
+        $(".animate2").addClass("slidedwn").css("visibility", "visible");
+        $(".animate3").addClass("slideup").css("visibility", "visible");
+
+      }
+      else {
+        $(".animate1").removeClass("slidelft").css("visibility", "hidden");
+        $(".animate2").removeClass("slidedwn").css("visibility", "hidden");
+        $(".animate3").removeClass("slideup").css("visibility", "hidden");
       }
     }
   });
