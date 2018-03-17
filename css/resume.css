@@ -232,7 +232,8 @@ h2 {
       word-wrap: normal;
       white-space: nowrap;
       margin-top: 25px;
-      direction: ltr; } }
+      direction: ltr; } 
+    }
       
 
 @media (min-width: 992px) { /*Side nav styling for desktop view*/
@@ -302,7 +303,7 @@ h2 {
       animation: 
         fadeLeftRight 6.5s ease-in .7s forwards;
       -moz-animation: 
-        fadeLeftRight 6.5s ease-in .7s forwards; } } 
+        fadeLeftRight 6.5s ease-in .7s forwards; }  
     .slidelft {
       position: relative;
       left: 2000px;
@@ -324,7 +325,8 @@ h2 {
     .bounceInLeft {
       animation: bounceInLeft 1s .5s both;
       -moz-animation: bounceInLeft 1s .5s both;
-    }
+    } 
+  }
     
 
 /*fadein left effect*/
