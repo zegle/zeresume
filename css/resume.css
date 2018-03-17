@@ -218,7 +218,7 @@ h2 {
       text-transform: uppercase;
       font-weight: 500;
       font-family: 'Saira Extra Condensed', serif;
-      font-size: 1.35rem; } }
+      font-size: 1.35rem; } 
 
     .material-icons {
       font-family: 'Material Icons';
@@ -232,7 +232,7 @@ h2 {
       word-wrap: normal;
       white-space: nowrap;
       margin-top: 25px;
-      direction: ltr; }
+      direction: ltr; } }
       
 
 @media (min-width: 992px) { /*Side nav styling for desktop view*/
@@ -302,7 +302,7 @@ h2 {
       animation: 
         fadeLeftRight 6.5s ease-in .7s forwards;
       -moz-animation: 
-        fadeLeftRight 6.5s ease-in .7s forwards; }  
+        fadeLeftRight 6.5s ease-in .7s forwards; } } 
     .slidelft {
       position: relative;
       left: 2000px;
@@ -320,7 +320,7 @@ h2 {
       bottom: -1000px;
       animation: 
         slide3 0.5s 1s forwards;
-      -moz-animation: slide3 0.5s 1s forwards; }}
+      -moz-animation: slide3 0.5s 1s forwards; }
     .bounceInLeft {
       animation: bounceInLeft 1s .5s both;
       -moz-animation: bounceInLeft 1s .5s both;
