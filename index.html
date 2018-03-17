@@ -19,6 +19,7 @@
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <link href="vendor/devicons/css/devicons.min.css" rel="stylesheet">
     <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <!-- Custom styles -->
     <link href="css/resume.css" rel="stylesheet">
@@ -36,12 +37,15 @@
 
     <div id="landing-container">
       <div class="landing-content">
-        <h1 id="landing-head">Zachary
+        <h1 id="landing-head" class="fadeInLeft">Zachary
           <span class="text-primary">Egle</span>
         </h1>
-        <div class="subheading">Web Design · UX · UI · Front-end Development
+        <div class="subheading fadeInRight">Web Design · UX · UI · Front-end Development
         </div>
-        <a class="js-scroll-trigger" href="#about">View More</a>
+        <div class="bounceInBottom">
+          <a class="animatehead js-scroll-trigger" href="#about">View More<div class="fadeRightLeft"></div></a>
+        </div>
+        <a class="fadein js-scroll-trigger" href="#about"><i class="material-icons bounce">keyboard_arrow_down</i></a>
       </div>
     </div>
 
@@ -83,15 +87,16 @@
 
       <section class="resume-section p-3 p-lg-5 d-flex d-column" id="about">
         <div class="my-auto">
-          <h1 class="mb-0">Zachary
-            <span class="text-primary">Egle</span>
-          </h1>
-          <div class="subheading mb-5">1000 Bluffview dr - Saint George, UT 84780 - (808) 339-6463 -
-            <a href="mailto:Zewebd@gmail.com">ZEwebd@gmail.com</a>
-          </div>
-          <div class="animate typewriter">
-          <p class="mb-5">I am experienced in Web Design and Front-end Development. With these skills, I can provide prompt solutions that will further development and UX for any web project, framework, or UI Application</p>
-          </div>
+          <div class="animate showhide"><!-- animate div for this section -->
+            <h1 class="mb-0">Zachary
+              <span class="text-primary">Egle</span>
+            </h1>
+            <div class="subheading mb-5">1000 Bluffview dr - Saint George, UT 84780 - (808) 339-6463 -
+              <a href="mailto:Zewebd@gmail.com">ZEwebd@gmail.com</a>
+            </div>
+            <p class="mb-5">I am experienced in Web Design and Front-end Development. With these skills, I can provide prompt solutions that will further development and UX for any web project, framework, or UI Application</p>
+            <div class="animated fadeLeftRight"></div>
+          </div><!-- end of animate div for this section -->
           <ul class="list-inline list-social-icons mb-0">
             <li class="list-inline-item">
               <a href="https://www.instagram.com/american_zegle/" target="_blank">
@@ -122,7 +127,7 @@
       </section>
 
       <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="experience">
-        <div class="my-auto">
+        <div class="my-auto experience"><!--.experience is used for animation toggle in js-->
           <h2 class="mb-5">Experience</h2>
 
           <div class="resume-item d-flex flex-column flex-md-row mb-5">
@@ -152,28 +157,28 @@
       </section>
 
       <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="education">
-        <div class="my-auto">
+        <div class="my-auto education"><!--.education is used for animation toggle in js-->
           <h2 class="mb-5">Education</h2>
 
           <div class="resume-item d-flex flex-column flex-md-row mb-5">
             <div class="resume-content mr-auto">
-              <h3 class="mb-0">Dixie State University</h3>
-              <div class="subheading mb-3">Bachelor of Science</div>
-              <div>Computer Science - Web Development Focus</div>
+              <h3 class="animate5 slidedwn mb-0">Dixie State University</h3>
+              <div class="animate5 slidedwn subheading mb-3">Bachelor of Science</div>
+              <p class="animate4 slidelft">Computer Science - Web Development Focus</p>
             </div>
             <div class="resume-date text-md-right">
-              <span class="text-primary">August 2015 - Present</span>
+              <span class="animate5 slidedwn text-primary">August 2015 - Present</span>
             </div>
           </div>
 
           <div class="resume-item d-flex flex-column flex-md-row">
             <div class="resume-content mr-auto">
-              <h3 class="mb-0">Waiakea High School</h3>
-              <div class="subheading mb-3">Business, Engineering, Science, & Technology Program</div>
-              <p>GPA: 3.1</p>
+              <h3 class="animate6 slideup mb-0">Waiakea High School</h3>
+              <div class="animate6 slideup subheading mb-3">Business, Engineering, Science, & Technology Program</div>
+              <p class="animate4 slidelft">GPA: 3.1</p>
             </div>
             <div class="resume-date text-md-right">
-              <span class="text-primary">Graduated - May 2015</span>
+              <span class="animate6 slideup text-primary">Graduated - May 2015</span>
             </div>
           </div>
 
@@ -187,32 +192,48 @@
           <div class="subheading mb-3">Programming Languages &amp; Tools</div>
           <ul class="list-inline list-icons">
             <li class="list-inline-item">
-              <i class="devicons devicons-html5"></i>
+              <div class="animate7 bounceInLeft">
+                <i class="devicons devicons-html5"></i>
+              </div>
             </li>
             <li class="list-inline-item">
-              <i class="devicons devicons-css3"></i>
+              <div class="animate7 bounceInLeft" style="animation-delay: 1s;">
+                <i class="devicons devicons-css3"></i>
+              </div>
             </li>
             <li class="list-inline-item">
-              <i class="devicons devicons-javascript"></i>
+              <div class="animate7 bounceInLeft" style="animation-delay: 1.5s;">
+                <i class="devicons devicons-javascript"></i>
+              </div>
             </li>
             <li class="list-inline-item">
-              <i class="devicons devicons-jquery"></i>
+              <div class="animate7 bounceInLeft" style="animation-delay: 2s;">
+                <i class="devicons devicons-jquery"></i>
+              </div>
             </li>
             <li class="list-inline-item">
-              <i class="devicons devicons-python"></i>
+              <div class="animate7 bounceInLeft" style="animation-delay: 2.5s;">
+                <i class="devicons devicons-python"></i>
+              </div>
             </li>
             <li class="list-inline-item">
-              <i class="devicons devicons-bootstrap"></i>
+              <div class="animate7 bounceInLeft" style="animation-delay: 3s;">
+                <i class="devicons devicons-bootstrap"></i>
+              </div>
             </li>
             <li class="list-inline-item">
-              <i class="devicons devicons-wordpress"></i>
+              <div class="animate7 bounceInLeft" style="animation-delay: 3.5s;">
+                <i class="devicons devicons-wordpress"></i>
+              </div>
             </li>
             <li class="list-inline-item">
-              <i class="devicons devicons-npm"></i>
+              <div class="animate7 bounceInLeft" style="animation-delay: 4s;">
+                <i class="devicons devicons-npm"></i>
+              </div>
             </li>
           </ul>
 
-          <div class="subheading mb-3">Workflow</div>
+          <div class="skills subheading mb-3">Workflow</div>
           <ul class="fa-ul mb-0">
             <li>
               <i class="fa-li fa fa-check"></i>
