@@ -42,54 +42,54 @@ $(document).ready(function () {
 var win = $(window);
 
 win.scroll(function (event) {
-
-  $(".animated").each(function (i, el) {
-    var el = $(el);
-    if (el.visible(true)) {
-      el.addClass("fadeLeftRight");
-      $(".showhide").css('visibility', 'visible');
-    }
-    else {
-      $(".animated").removeClass("fadeLeftRight");
-      $(".showhide").css('visibility', 'hidden');
-    }
-  });
-  $(".experience").each(function (i, el) {
-    var el = $(el);
-    if (el.visible(true)) {
-      $(".animate1").addClass("slidelft").css('visibility', 'visible');
-      $(".animate2").addClass("slidedwn").css("visibility", "visible");
-      $(".animate3").addClass("slideup").css("visibility", "visible");
-    }
-    else {
-      $(".animate1").removeClass("slidelft").css("visibility", "hidden");
-      $(".animate2").removeClass("slidedwn").css("visibility", "hidden");
-      $(".animate3").removeClass("slideup").css("visibility", "hidden");
-    }
-  });
-  $(".education").each(function (i, el) {
-    var el = $(el);
-    if (el.visible(true)) {
-      $(".animate4").addClass("slidelft").css('visibility', 'visible');
-      $(".animate5").addClass("slidedwn").css("visibility", "visible");
-      $(".animate6").addClass("slideup").css("visibility", "visible");
-    }
-    else {
-      $(".animate4").removeClass("slidelft").css("visibility", "hidden");
-      $(".animate5").removeClass("slidedwn").css("visibility", "hidden");
-      $(".animate6").removeClass("slideup").css("visibility", "hidden");
-    }
-  });
-  $(".skills").each(function (i, el) {
-    var el = $(el);
-    if (el.visible(true)) {
-      $(".animate7").addClass("bounceInLeft").css('visibility', 'visible');
-    }
-    else {
-      $(".animate7").removeClass("bounceInLeft").css("visibility", "hidden");
-    }
-  });
-  
+  if ($(window).width() >= 992) { 
+    $(".animated").each(function (i, el) {
+      var el = $(el);
+      if (el.visible(true)) {
+        el.addClass("fadeLeftRight");
+        $(".showhide").css('visibility', 'visible');
+      }
+      else {
+        $(".animated").removeClass("fadeLeftRight");
+        $(".showhide").css('visibility', 'hidden');
+      }
+    });
+    $(".experience").each(function (i, el) {
+      var el = $(el);
+      if (el.visible(true)) {
+        $(".animate1").addClass("slidelft").css('visibility', 'visible');
+        $(".animate2").addClass("slidedwn").css("visibility", "visible");
+        $(".animate3").addClass("slideup").css("visibility", "visible");
+      }
+      else {
+        $(".animate1").removeClass("slidelft").css("visibility", "hidden");
+        $(".animate2").removeClass("slidedwn").css("visibility", "hidden");
+        $(".animate3").removeClass("slideup").css("visibility", "hidden");
+      }
+    });
+    $(".education").each(function (i, el) {
+      var el = $(el);
+      if (el.visible(true)) {
+        $(".animate4").addClass("slidelft").css('visibility', 'visible');
+        $(".animate5").addClass("slidedwn").css("visibility", "visible");
+        $(".animate6").addClass("slideup").css("visibility", "visible");
+      }
+      else {
+        $(".animate4").removeClass("slidelft").css("visibility", "hidden");
+        $(".animate5").removeClass("slidedwn").css("visibility", "hidden");
+        $(".animate6").removeClass("slideup").css("visibility", "hidden");
+      }
+    });
+    $(".skills").each(function (i, el) {
+      var el = $(el);
+      if (el.visible(true)) {
+        $(".animate7").addClass("bounceInLeft").css('visibility', 'visible');
+      }
+      else {
+        $(".animate7").removeClass("bounceInLeft").css("visibility", "hidden");
+      }
+    });
+  }
 });
 
 // configured nav slide in at specific scroll point, 
