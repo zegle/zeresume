@@ -48,9 +48,11 @@ win.scroll(function (event) {
       if (el.visible(true)) {
         el.addClass("fadeLeftRight");
         $(".showhide").css('visibility', 'visible');
+        $(".animate").addClass("slideup");
       }
       else {
         $(".animated").removeClass("fadeLeftRight");
+        $(".animate").removeClass("slideup");
         $(".showhide").css('visibility', 'hidden');
       }
     });
