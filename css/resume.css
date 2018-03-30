@@ -329,7 +329,7 @@ h2 {
 
 @media (min-width: 992px) { /*landing Page styling for desktop view*/
   #landing-container {
-    background-position: center; }
+    background-position: center top; }
     #landing-container .landing-content {
       padding-top: 20%;}
       #landing-container .landing-content h1 {
