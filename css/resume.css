@@ -381,8 +381,7 @@ h2 {
     }
 
 .cube-wrap {
-  margin-left: 30%;
-  padding-bottom: 10px;
+  padding-bottom: 50px;
   perspective: 1000px;
   perspective-origin: 50% 50%;
 }
@@ -489,6 +488,9 @@ h2 {
     fadeRightLeft 1.5s ease-in 5.5s forwards; }
 
 @media (min-width: 992px) { /*css for desktop animations*/
+    .cube-wrap {
+      padding-bottom: 10px;
+      margin-left: 30%; }
     .fadeInRight {
       animation: fadeInRight 4s 3.5s both;
       -moz-animation: fadeInRight 4s 3.5s both; }
