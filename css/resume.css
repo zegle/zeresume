@@ -32,13 +32,16 @@ h1 {
 h2 {
   font-size: 3.5rem; }
 
-.bubbles {
+.slideshow {
+  display: none;
+}
+
+.bubbles {  /*Animated bg*/
   position: relative;
   left: 0;
   top: 0;
   width: 100%;
-  height: 100%;
-}
+  height: 100%; }
   .bubbles li {
     position: absolute;
     list-style: none;
@@ -47,59 +50,43 @@ h2 {
     height: 20px;
     background: rgba(255, 0, 0, 0.3);
     animation: bg 26s linear infinite;
-    bottom: -500px;
-  }
+    bottom: -500px; }
     .bubbles li:nth-child(1) {
       left: 25%;
       width: 80px;
       height: 80px;
-      animation-delay: 0;
-    }
+      animation-delay: 0; }
     .bubbles li:nth-child(2) {
       left: 70%;
       width: 20px;
       height: 20px;
-      animation-delay: 4s;
-    }
+      animation-delay: 4s; }
     .bubbles li:nth-child(3) {
       left: 40%;
       width: 60px;
       height: 60px;
       animation-delay: 0s;
-      animation-duration: 18s;
-    }
+      animation-duration: 18s; }
     .bubbles li:nth-child(4) {
       left: 65%;
       width: 20px;
       height: 20px;
-      animation-delay: 0s;
-    }
-    .bubbles li:nth-child(5) {
-      left: 75%;
-      width: 110px;
-      height: 110px;
-      animation-delay: 3s;
-    }
+      animation-delay: 0s; }
+    .bubbles li:nth-child(5) {/*edited for tablet and up at the bottom*/
+      visibility: hidden; }
     .bubbles li:nth-child(6) {
       left: 35%;
       width: 150px;
       height: 150px;
-      animation-delay: 7s;
-    }
+      animation-delay: 7s; }
     .bubbles li:nth-child(7) {
       left: 50%;
       width: 25px;
       height: 25px;
       animation-delay: 1s;
-      animation-duration: 45s;
-    }
-    .bubbles li:nth-child(8) {
-      left: 85%;
-      width: 150px;
-      height: 150px;
-      animation-delay: 0s;
-      animation-duration: 11s;
-    }
+      animation-duration: 45s; }
+    .bubbles li:nth-child(8) {/*edited for tablet and up at the bottom*/
+      visibility: hidden; }
 @keyframes bg {
   0% {transform: translateY(0) rotate(0deg); opacity: 1; border-radius: 0;}
   100% {transform: translateY(-1500px) rotate(720deg); opacity: 0; border-radius: 50%;}
@@ -279,40 +266,25 @@ h2 {
 #sideNav .navbar-nav .nav-item .nav-link {
   font-weight: 600;
   text-transform: uppercase; }
-#landing-container .landing-content {
-  display: none;
-}
 
-#landing-head {
-    color: rgb(64,64,64) !important;}
-
-#work h2 {
-  text-align: center;
-  border: .5px solid transparent;
-  border-bottom-color: #cbd1d6;
-}
-
-.slider {
-  padding-top: 40px;
-}
-
-@media (min-width: 992px) { /*landing Page styling for desktop view*/
-  #landing-container {
+#landing-container {
     background-image: url(../img/landing.jpg);
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: ;
+    background-position: 60%;
     left: -100px;
     width: 100%;
-    height: 1000px; }
+    height: 100%;
+    max-height: 1000px;}
     #landing-container .landing-content {
       display: block;
       text-align: center;
-      padding-top: 20%;}
+      padding-top: 50%;
+      padding-bottom: 50%;}
       #landing-container .landing-content h1 {
-        font-size: 10rem;
-        padding-bottom: 20px; }
+        font-size: 5rem;
+        padding-bottom: 0px; }
         #landing-container .landing-content .subheading {
           padding-bottom: 30px; }
           #landing-container .landing-content .bounceInBottom a {
@@ -341,8 +313,34 @@ h2 {
       white-space: nowrap;
       margin-top: 25px;
       direction: ltr; } 
-      .proj-4 {
-        margin-left: 17%;}
+
+#landing-head {
+    color: rgb(64,64,64) !important;}
+
+#work h2 {
+  text-align: center;
+  border: .5px solid transparent;
+  border-bottom-color: #cbd1d6;
+}
+
+.slides {
+  padding-top: 40px;
+}
+
+@media (min-width: 992px) { /*landing Page styling for desktop view*/
+  #landing-container {
+    background-position: center; }
+    #landing-container .landing-content {
+      padding-top: 20%;}
+      #landing-container .landing-content h1 {
+        font-size: 10rem;
+        padding-bottom: 20px; }
+        #landing-container .landing-content .subheading {
+          }
+          #landing-container .landing-content .bounceInBottom a {
+            }
+            #landing-container .landing-content a:hover {
+              }
     }
       
 
@@ -382,32 +380,118 @@ h2 {
       transform: scale(1.1);
     }
 
+.cube-wrap {
+  margin-left: 30%;
+  padding-bottom: 10px;
+  perspective: 1000px;
+  perspective-origin: 50% 50%;
+}
+
+.cube-wrap:hover .cube-front {
+  transform: translateZ(200px);
+}
+.cube-wrap:hover .cube-back {
+  transform: translateZ(-200px) rotateY(180deg);
+}
+.cube-wrap:hover .cube-right {
+  transform: rotateY(-270deg) translateZ(100px) translateX(100px);
+}
+.cube-wrap:hover .cube-left {
+  transform: rotateY(270deg) translateZ(100px) translateX(-100px);
+}
+.cube-wrap:hover .cube-top {
+  transform: rotateX(-270deg) translateZ(100px) translateY(-100px);
+}
+.cube-wrap:hover .cube-bottom {
+  transform: rotateX(270deg) translateZ(100px) translateY(100px);
+}
+
+.cube {
+  position: relative;
+  margin: auto;
+  height: 200px;
+  width: 200px;
+  transform-style: preserve-3d;
+  animation: rotation 20s infinite linear;
+}
+
+
+.cube > div {
+  position: absolute;
+  box-sizing: border-box;
+  padding: 10px;
+  height: 100%;
+  width: 100%;
+  background-color: #4f5458;
+  border: solid 1px #eeeeee;
+  color: #ffffff;
+  transition: transform .2s ease-in;
+}
+
+.cube-front {
+  transform: translateZ(100px);
+}
+.cube-back {
+  transform: translateZ(-100px) rotateY(180deg);
+}
+.cube-right {
+  transform: rotateY(-270deg) translateX(100px);
+  transform-origin: top right;
+}
+.cube-left {
+  transform: rotateY(270deg) translateX(-100px);
+  transform-origin: center left;
+}
+.cube-top {
+  transform: rotateX(-270deg) translateY(-100px);
+  transform-origin: top center;
+}
+.cube-bottom {
+  transform: rotateX(270deg) translateY(100px);
+  transform-origin: bottom center;
+}
+@keyframes rotation {
+  from {
+    transform: rotateX(0deg) rotateY(0deg);
+  }
+  to {
+    transform: rotateX(360deg) rotateY(360deg);
+  }
+}
+@-moz-keyframes rotation { from {transform: rotateX(0deg) rotateY(0deg);} to {transform: rotateX(360deg) rotateY(360deg);} }
+
+
+/*CSS ANIMATIONS FOR MOBILE UP*/
+.fadeInLeft {
+  animation: fadeInLeft 4s 2s both;
+  -moz-animation: fadeInLeft 4s 2s both; }
+.fadeInRight {/*Changed to proper animation for desktop view below*/
+  animation: fadein 4s 3.5s both;
+  -moz-animation: fadein 4s 3.5s both; }
+.bounceInBottom {
+  animation: bounceInBottom 1s 4.5s both;
+  -moz-animation: bounceInBottom 1s 4.5s both; }
+.fadein {
+  animation: fadein 3s 5.5s both; 
+  -moz-animation: fadein 3s 5.5s both; }
+.bounce {
+  animation: bounce 2s infinite;
+  -moz-animation: bounce 2s infinite; }
+.animatehead {position: relative; overflow: hidden; margin: 0 auto;}
+.fadeRightLeft {
+  position: absolute;
+  top:0; bottom:0; left:0;
+  width: 100%;
+  background: #bd5d38;
+  animation: 
+    fadeRightLeft 1.5s ease-in 5.5s forwards;
+  -moz-animation: 
+    fadeRightLeft 1.5s ease-in 5.5s forwards; }
+
 @media (min-width: 992px) { /*css for desktop animations*/
-    .fadeInLeft {
-      animation: fadeInLeft 4s 2s both;
-      -moz-animation: fadeInLeft 4s 2s both; }
     .fadeInRight {
       animation: fadeInRight 4s 3.5s both;
       -moz-animation: fadeInRight 4s 3.5s both; }
-    .bounceInBottom {
-      animation: bounceInBottom 1s 4.5s both;
-      -moz-animation: bounceInBottom 1s 4.5s both; }
-    .fadein {
-      animation: fadein 3s 5.5s both; 
-      -moz-animation: fadein 3s 5.5s both; }
-    .bounce {
-      animation: bounce 2s infinite;
-      -moz-animation: bounce 2s infinite; }
-    .animatehead {position: relative; overflow: hidden; margin: 0 auto;}
-    .fadeRightLeft {
-      position: absolute;
-      top:0; bottom:0; left:0;
-      width: 100%;
-      background: #bd5d38;
-      animation: 
-        fadeRightLeft 1.5s ease-in 5.5s forwards;
-      -moz-animation: 
-        fadeRightLeft 1.5s ease-in 5.5s forwards; }
     .showhide {position: relative; overflow: hidden; margin: 0 auto;}
     .fadeLeftRight {
       position: absolute;
@@ -437,8 +521,8 @@ h2 {
         slide3 0.5s 1s forwards;
       -moz-animation: slide3 0.5s 1s forwards; }
     .bounceInLeft {
-      animation: bounceInLeft 1s .3s both;
-      -moz-animation: bounceInLeft 1s .3s both; }
+      animation: bounceInLeft 1s both;
+      -moz-animation: bounceInLeft 1s both; }
   }
     
 /*fadein left effect*/
@@ -521,7 +605,22 @@ section.resume-section {
   section.resume-section .resume-item .resume-date {
     min-width: none; }
 
-@media (min-width: 768px) {
+@media (min-width: 768px) {/*tablet view*/
+  .slideshow {
+    display: block; }
+  .bubbles li:nth-child(5) {
+      visibility: visible;
+      left: 75%;
+      width: 110px;
+      height: 110px;
+      animation-delay: 3s; }
+  .bubbles li:nth-child(8) {
+      visibility: visible;
+      left: 85%;
+      width: 150px;
+      height: 150px;
+      animation-delay: 0s;
+      animation-duration: 11s; }
   section.resume-section {
     min-height: 100vh; }
     section.resume-section .resume-item .resume-date {
@@ -538,6 +637,13 @@ section.resume-section {
 .text-primary {
   color: #910102 !important; }
 
+.img-slide:hover {
+  transform: scale(1.1);
+  filter: opacity(.7);
+  -webkit-box-shadow: 2px 3px 9px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 2px 3px 9px 0px rgba(0,0,0,0.75);
+}
+  
 a {
   color: #BD5D38; }
   a:hover, a:focus, a:active {
