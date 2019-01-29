@@ -96,12 +96,15 @@ win.scroll(function (event) {
 
 // configured nav slide in at specific scroll point, 
 // adds/removes body padding at specific scroll position
+$(window).on('scroll', function () {
+  console.log($(this).scrollTop());
+});
 $(function() {
   $(window).scroll(function () {
     var availableScroll = $(document).height() - $(window).height();
       var x = $(window).scrollTop();
     if ($(window).width() >= 992) {
-      if (x >= 998 || Math.abs(x - availableScroll) < 10) {
+      if (x >= 625 || Math.abs(x - availableScroll) < 10) {
         $("body").stop().animate({ "padding-left": "17rem" });
         $("#sideNav").stop().animate({ "left": "0px" });
         /*$(".animate").addClass("typewriter").css('visibility', 'visible');*/
